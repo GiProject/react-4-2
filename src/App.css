@@ -1,38 +1,94 @@
-.App {
+.view {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.form-block {
+  margin: auto;
+}
+
+.form-block form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.form-block form .form-input {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.form-block form .form-input:not(:first-child) {
+  margin-left: 20px;
+}
+
+.form-block form .form-input label {
+  margin-bottom: 15px;
+}
+
+.form-block form .form-input input, 
+.form-block form button
+ {
+  font-size: 14px;
+  padding: 14px 10px;
+  border-radius: 10px;
+  border: solid 1px #000;
+}
+
+.form-block form button {
+  margin-left: 20px;
+  height: 46px;
+  width: 80px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+ul li {
+  display: flex;
+}
+
+ul li > * {
+  width: 33.33%;
+  
+}
+
+ul li > *:not(:first-child):not(:last-child) {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+ul li > *:last-child {
+  text-align: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul.table-header {
+margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul.table {
+  border: 1px solid #000;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+ul.table li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul.table li span:last-child:hover {
+  cursor: pointer;
+}
+
+.errors {
+  color: #c00;
+  text-align: center;
+  margin-bottom: 10px;
 }
